@@ -6,8 +6,8 @@ import { ReactComponent as Logo } from "../../assets/crown.svg";
 const Header = () => {
   return (
     <nav className="container mt-10">
-      <div className="flex justify-between mb-10">
-        <Link className="h-full w-5 p-2" to="/">
+      <div className="flex justify-between mb-4 content-center mx-2">
+        <Link className="h-full w-5" to="/">
           <Logo />
         </Link>
         <div className="w-80 h-full flex items-center justify-end uppercase">

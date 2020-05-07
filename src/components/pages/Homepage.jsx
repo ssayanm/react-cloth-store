@@ -11,15 +11,13 @@ const Homepage = () => {
   // }, []);
 
   return (
-    <main className="">
+    <section className="container flex flex-wrap mb-4 w-full uppercase justify-center">
       {collections.map((collection) =>
         collection.map((category) => (
-          <div key={category.id} className="">
-            <HomeCardComponent key={category.id} collection={category} />
-          </div>
+          <HomeCardComponent key={category.id} collection={category} />
         ))
       )}
-    </main>
+    </section>
   );
 };
 
