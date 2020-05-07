@@ -12,9 +12,13 @@ const Homepage = () => {
 
   return (
     <main className="">
-      {collections.map((collection, key) => (
-        <HomeCardComponent key={key} collection={collection} />
-      ))}
+      {collections.map((collection) =>
+        collection.map((category) => (
+          <div key={category.id} className="">
+            <HomeCardComponent key={category.id} collection={category} />
+          </div>
+        ))
+      )}
     </main>
   );
 };
