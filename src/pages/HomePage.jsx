@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
-import { GlobalContext } from "../../context/GlobalState";
-import HomeCardComponent from "../HomeCardComponent";
+import { GlobalContext } from "../context/GlobalState";
+import HomeCardComponent from "../components/HomeCardComponent";
 
-const Homepage = () => {
+const HomePage = () => {
   const { collections, getCollections } = useContext(GlobalContext);
 
   // useEffect(() => {
@@ -21,4 +21,4 @@ const Homepage = () => {
   );
 };
 
-export default Homepage;
+export default HomePage;

@@ -14,7 +14,7 @@ const Header = () => {
           <Link to="/" className="p-3 cursor-pointer hover:text-blue-400">
             Home
           </Link>
-          <Link to="/" className="p-3 cursor-pointer hover:text-blue-400">
+          <Link to="/shop" className="p-3 cursor-pointer hover:text-blue-400">
             Shop
           </Link>
           <Link to="/" className="p-3 cursor-pointer hover:text-blue-400">

@@ -5,9 +5,20 @@ module.exports = {
   theme: {
     container: {
       center: true,
+      button: {
+        default: "uppercase",
+      },
     },
+    height: {
+      72: "18rem",
+      80: "20rem",
+    },
+    button: {
+      default: "uppercase",
+    },
+
     fontFamily: {
-      sans: "Helvetica, Arial, sans-serif",
+      sans: "Open Sans Condensed, sans-serif",
     },
     extend: {},
   },

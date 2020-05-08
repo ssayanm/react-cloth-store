@@ -2,7 +2,8 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
-import Homepage from "./components/pages/Homepage";
+import HomePage from "./pages/HomePage";
+import ShopPage from "./pages/ShopPage";
 
 const App = () => {
   return (
@@ -10,7 +11,8 @@ const App = () => {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/" component={Homepage} />
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/shop" component={ShopPage} />
         </Switch>
         <Footer />
       </Router>

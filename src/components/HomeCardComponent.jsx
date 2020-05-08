@@ -4,7 +4,7 @@ const HomeCardComponent = ({ collection }) => {
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center">
       <img
-        className="w-full h-64"
+        className="w-full h-80 object-cover"
         src={collection.imageUrl}
         alt="collections"
       />

@@ -4,8 +4,9 @@ const STORE_DATA = [
     title: "Hats",
     category: "hats",
     imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
+    linkUrl: "shop/hats",
     routeName: "hats",
-    items: [
+    products: [
       {
         id: 1,
         name: "Brown Brim",
@@ -67,8 +68,9 @@ const STORE_DATA = [
     title: "Sneakers",
     category: "sneakers",
     imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
+    linkUrl: "shop/sneakers",
     routeName: "sneakers",
-    items: [
+    products: [
       {
         id: 10,
         name: "Adidas NMD",
@@ -124,8 +126,9 @@ const STORE_DATA = [
     title: "Jackets",
     category: "jackets",
     imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
+    linkUrl: "shop/jackets",
     routeName: "jackets",
-    items: [
+    products: [
       {
         id: 18,
         name: "Black Jean Shearling",
@@ -163,8 +166,9 @@ const STORE_DATA = [
     title: "Womens",
     category: "womens",
     imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
+    linkUrl: "shop/womens",
     routeName: "womens",
-    items: [
+    products: [
       {
         id: 23,
         name: "Blue Tanktop",
@@ -214,8 +218,9 @@ const STORE_DATA = [
     title: "Mens",
     category: "mens",
     imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
+    linkUrl: "shop/mens",
     routeName: "mens",
-    items: [
+    products: [
       {
         id: 30,
         name: "Camo Down Vest",
