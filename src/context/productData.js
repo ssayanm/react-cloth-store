@@ -1,12 +1,9 @@
-const STORE_DATA = [
-  {
+const PRODUCT_DATA = {
+  hats: {
     id: 1,
     title: "Hats",
-    category: "hats",
-    imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-    linkUrl: "shop/hats",
     routeName: "hats",
-    products: [
+    items: [
       {
         id: 1,
         name: "Brown Brim",
@@ -63,14 +60,11 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  sneakers: {
     id: 2,
     title: "Sneakers",
-    category: "sneakers",
-    imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-    linkUrl: "shop/sneakers",
     routeName: "sneakers",
-    products: [
+    items: [
       {
         id: 10,
         name: "Adidas NMD",
@@ -121,14 +115,11 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  jackets: {
     id: 3,
     title: "Jackets",
-    category: "jackets",
-    imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-    linkUrl: "shop/jackets",
     routeName: "jackets",
-    products: [
+    items: [
       {
         id: 18,
         name: "Black Jean Shearling",
@@ -161,14 +152,11 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  womens: {
     id: 4,
     title: "Womens",
-    category: "womens",
-    imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-    linkUrl: "shop/womens",
     routeName: "womens",
-    products: [
+    items: [
       {
         id: 23,
         name: "Blue Tanktop",
@@ -213,14 +201,11 @@ const STORE_DATA = [
       },
     ],
   },
-  {
+  mens: {
     id: 5,
     title: "Mens",
-    category: "mens",
-    imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-    linkUrl: "shop/mens",
     routeName: "mens",
-    products: [
+    items: [
       {
         id: 30,
         name: "Camo Down Vest",
@@ -259,6 +244,6 @@ const STORE_DATA = [
       },
     ],
   },
-];
+};
 
-export default STORE_DATA;
+export default PRODUCT_DATA;
