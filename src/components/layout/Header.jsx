@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import CartIconComponent from "../../components/CartIconComponent";
 
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
@@ -23,6 +24,7 @@ const Header = () => {
           <Link to="/" className="p-3 cursor-pointer hover:text-blue-400">
             Sign In
           </Link>
+          <CartIconComponent />
         </div>
       </div>
     </nav>
