@@ -8,6 +8,7 @@ import CATEGORY_DATA from "./categoryData";
 const initialState = {
   products: [PRODUCT_DATA],
   categories: [CATEGORY_DATA],
+  cart: [{ cartItems: [], hidden: true }],
 };
 
 //Create Context
@@ -17,7 +18,22 @@ export const GlobalContext = createContext(initialState);
 export const GlobalProvider = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  // //Actions
+  // Actions
+
+  // const toggleCartHidden = () => ({
+  //   type: "TOGGLE_CART_HIDDEN",
+  // });
+
+  // const removeItem = (item) => ({
+  //   type: "REMOVE_ITEM",
+  //   payload: item,
+  // });
+
+  // const clearItemFromCart = (item) => ({
+  //   type: "CLEAR_ITEM_FROM_CART",
+  //   payload: item,
+  // });
+
   // const getTodos = async () => {
   //   try {
   //     const res = await axios.get("/api/v1/todos");
@@ -86,9 +102,20 @@ export const GlobalProvider = ({ children }) => {
   //   }
   // }
 
+  const addItem = (item) =>
+    dispatch({
+      type: "ADD_ITEM",
+      payload: item,
+    });
+
   return (
     <GlobalContext.Provider
-      value={{ products: state.products, categories: state.categories }}
+      value={{
+        products: state.products,
+        categories: state.categories,
+        cart: state.cart,
+        addItem,
+      }}
     >
       {children}
     </GlobalContext.Provider>

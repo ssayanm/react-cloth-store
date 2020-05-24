@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../context/GlobalState";
 
 const ProductCardComponent = ({ product }) => {
+  const { addItem } = useContext(GlobalContext);
+  // const { name, price, imageUrl } = product;
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">
       <img
@@ -12,7 +15,10 @@ const ProductCardComponent = ({ product }) => {
         <div> {product.name}</div>
         <div> ${product.price}</div>
       </div>
-      <button className="my-4 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-1 px-6 border border-blue-500 hover:border-transparent rounded">
+      <button
+        onClick={() => addItem(product)}
+        className="my-4 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-1 px-6 border border-blue-500 hover:border-transparent rounded"
+      >
         Add to Cart
       </button>
     </div>
