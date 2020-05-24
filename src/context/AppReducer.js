@@ -9,13 +9,13 @@ export default (state, action) => {
     case "ADD_ITEM":
       return {
         ...state,
-        cartItems: [...state.cartItems, action.payload],
+        cartItems: addItemToCart(state.cartItems, action.payload),
       };
-    // case "REMOVE_ITEM":
-    //   return {
-    //     ...state,
-    //     cartItems: removeItemFromCart(state.cartItems, action.payload),
-    //   };
+    case "REMOVE_ITEM":
+      return {
+        ...state,
+        cartItems: removeItemFromCart(state.cartItems, action.payload),
+      };
     // case "CLEAR_ITEM_FROM_CART":
     //   return {
     //     ...state,

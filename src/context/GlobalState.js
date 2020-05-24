@@ -32,10 +32,10 @@ export const GlobalProvider = ({ children }) => {
       payload: item,
     });
 
-  // const removeItem = (item) => ({
-  //   type: "REMOVE_ITEM",
-  //   payload: item,
-  // });
+  const removeItem = (item) => ({
+    type: "REMOVE_ITEM",
+    payload: item,
+  });
 
   // const clearItemFromCart = (item) => ({
   //   type: "CLEAR_ITEM_FROM_CART",
@@ -118,6 +118,7 @@ export const GlobalProvider = ({ children }) => {
         cartItems: state.cartItems,
         hidden: state.hidden,
         addItem,
+        removeItem,
         toggleCartHidden,
       }}
     >
