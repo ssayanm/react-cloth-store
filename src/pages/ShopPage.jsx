@@ -9,7 +9,7 @@ const ShopPage = () => {
     <section className="container flex flex-wrap mb-4 w-full uppercase justify-center">
       {products.map((product) =>
         Object.values(product).map((item) => (
-          <CategoryCardComponent category={item} />
+          <CategoryCardComponent category={item} key={item.id} />
         ))
       )}
     </section>

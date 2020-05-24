@@ -11,7 +11,7 @@ const HomeCardComponent = ({ category }) => {
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{category.title}</div>
         <button className="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-          Buy Now
+          Shop Now
         </button>
       </div>
     </div>

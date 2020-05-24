@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
 import HomePage from "./pages/HomePage";
 import ShopPage from "./pages/ShopPage";
+import CheckoutPage from "./pages/CheckoutPage";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route exact path="/shop" component={ShopPage} />
+          <Route exact path="/checkout" component={CheckoutPage} />
         </Switch>
         <Footer />
       </Router>

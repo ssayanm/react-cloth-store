@@ -8,13 +8,13 @@ const ProductCardComponent = ({ product }) => {
         src={product.imageUrl}
         alt="collections"
       />
-      <div className="px-6 py-4 w-64">
-        <div className="text-xl mb-2"> {product.name}</div>
-
-        <button className="bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-          Add to Cart
-        </button>
+      <div className="py-1 flex px-4 justify-between text">
+        <div> {product.name}</div>
+        <div> ${product.price}</div>
       </div>
+      <button className="my-4 bg-transparent hover:bg-blue-500 text-blue-700 hover:text-white py-1 px-6 border border-blue-500 hover:border-transparent rounded">
+        Add to Cart
+      </button>
     </div>
   );
 };
