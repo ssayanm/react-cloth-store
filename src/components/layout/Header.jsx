@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import CartIconComponent from "../../components/CartIconComponent";
-
+import CartDropDownComponent from "../../components/CartDropDownComponent";
+import { GlobalContext } from "../../context/GlobalState";
 import { ReactComponent as Logo } from "../../assets/crown.svg";
 
 const Header = () => {
+  const { hidden } = useContext(GlobalContext);
   return (
     <nav className="container mt-10">
       <div className="flex justify-between mb-4 content-center mx-2">
@@ -26,6 +28,7 @@ const Header = () => {
           </Link>
           <CartIconComponent />
         </div>
+        {hidden ? null : <CartDropDownComponent />}
       </div>
     </nav>
   );

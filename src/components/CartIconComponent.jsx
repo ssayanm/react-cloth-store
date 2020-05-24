@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ReactComponent as ShoppingIcon } from "../assets/shopping-bag.svg";
+import { GlobalContext } from "../context/GlobalState";
 
 const CartIconComponent = () => {
+  const { hidden, toggleCartHidden } = useContext(GlobalContext);
+
   return (
-    <div className="flex justify-center align-top w-20 h-20 bold">
-      <ShoppingIcon className="w-6 h-6" />
-      <span className="absolute py-2 text-xs font-bold">12</span>
+    <div
+      className="flex justify-center align-top w-20 h-20 bold cursor-pointer"
+      onClick={toggleCartHidden}
+    >
+      {console.log(hidden)}
+      <ShoppingIcon className="w-6" />
+      <span className="absolute py-2 text-xs font-bold">10</span>
     </div>
   );
 };

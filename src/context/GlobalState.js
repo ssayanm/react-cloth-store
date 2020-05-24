@@ -9,6 +9,7 @@ const initialState = {
   products: [PRODUCT_DATA],
   categories: [CATEGORY_DATA],
   cart: [{ cartItems: [], hidden: true }],
+  hidden: true,
 };
 
 //Create Context
@@ -20,9 +21,10 @@ export const GlobalProvider = ({ children }) => {
 
   // Actions
 
-  // const toggleCartHidden = () => ({
-  //   type: "TOGGLE_CART_HIDDEN",
-  // });
+  const toggleCartHidden = () =>
+    dispatch({
+      type: "TOGGLE_CART_HIDDEN",
+    });
 
   // const removeItem = (item) => ({
   //   type: "REMOVE_ITEM",
@@ -114,7 +116,9 @@ export const GlobalProvider = ({ children }) => {
         products: state.products,
         categories: state.categories,
         cart: state.cart,
+        hidden: state.hidden,
         addItem,
+        toggleCartHidden,
       }}
     >
       {children}

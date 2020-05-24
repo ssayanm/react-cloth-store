@@ -1,7 +1,9 @@
-import React, { useContext } from "react";
+import React, { useState, useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 const CheckoutPage = () => {
+  const { cartItems } = useContext(GlobalContext);
+
   return (
     <div className="container w-2/4 flex flex-column align-middle">
       <div className="uppercase w-full flex justify-between border-b-2 border-color: #edf2f7;">

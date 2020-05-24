@@ -1,8 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { GlobalContext } from "../context/GlobalState";
 
 const ProductCardComponent = ({ product }) => {
   const { addItem } = useContext(GlobalContext);
+  const [cartItem, setCartItem] = useState("");
   // const { name, price, imageUrl } = product;
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">

@@ -1,10 +1,11 @@
 export default (state, action) => {
   switch (action.type) {
-    // case "TOGGLE_CART_HIDDEN":
-    //   return {
-    //     ...state,
-    //     hidden: !state.hidden,
-    //   };
+    case "TOGGLE_CART_HIDDEN":
+      return {
+        ...state,
+        hidden: !state.hidden,
+      };
+
     case "ADD_ITEM":
       return {
         ...state,
