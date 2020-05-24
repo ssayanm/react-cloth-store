@@ -3,18 +3,18 @@ import { GlobalContext } from "../context/GlobalState";
 
 const ProductCardComponent = ({ product }) => {
   const { addItem } = useContext(GlobalContext);
-  const [cartItem, setCartItem] = useState("");
-  // const { name, price, imageUrl } = product;
+  // const [cartItem, setCartItem] = useState("");
+  const { name, price, imageUrl } = product;
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">
       <img
         className="h-72 w-64 object-cover"
-        src={product.imageUrl}
+        src={imageUrl}
         alt="collections"
       />
       <div className="py-1 flex px-4 justify-between text">
-        <div> {product.name}</div>
-        <div> ${product.price}</div>
+        <div> {name}</div>
+        <div> ${price}</div>
       </div>
       <button
         onClick={() => addItem(product)}

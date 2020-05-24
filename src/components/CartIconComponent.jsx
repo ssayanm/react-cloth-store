@@ -10,7 +10,6 @@ const CartIconComponent = () => {
       className="flex justify-center align-top w-20 h-20 bold cursor-pointer"
       onClick={toggleCartHidden}
     >
-      {console.log(hidden)}
       <ShoppingIcon className="w-6" />
       <span className="absolute py-2 text-xs font-bold">10</span>
     </div>

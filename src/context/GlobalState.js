@@ -8,7 +8,7 @@ import CATEGORY_DATA from "./categoryData";
 const initialState = {
   products: [PRODUCT_DATA],
   categories: [CATEGORY_DATA],
-  cart: [{ cartItems: [], hidden: true }],
+  cartItems: [],
   hidden: true,
 };
 
@@ -24,6 +24,12 @@ export const GlobalProvider = ({ children }) => {
   const toggleCartHidden = () =>
     dispatch({
       type: "TOGGLE_CART_HIDDEN",
+    });
+
+  const addItem = (item) =>
+    dispatch({
+      type: "ADD_ITEM",
+      payload: item,
     });
 
   // const removeItem = (item) => ({
@@ -104,18 +110,12 @@ export const GlobalProvider = ({ children }) => {
   //   }
   // }
 
-  const addItem = (item) =>
-    dispatch({
-      type: "ADD_ITEM",
-      payload: item,
-    });
-
   return (
     <GlobalContext.Provider
       value={{
         products: state.products,
         categories: state.categories,
-        cart: state.cart,
+        cartItems: state.cartItems,
         hidden: state.hidden,
         addItem,
         toggleCartHidden,
