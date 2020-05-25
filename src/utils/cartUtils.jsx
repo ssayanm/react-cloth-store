@@ -34,3 +34,11 @@ export const selectCartItemsCount = (cartItems) => {
     0
   );
 };
+
+export const selectCartTotal = (cartItems) => {
+  return (cartItems) =>
+    cartItems.reduce(
+      (accumalatedQuantity, cartItem) =>
+        accumalatedQuantity + cartItem.quantity * cartItem.price
+    );
+};
