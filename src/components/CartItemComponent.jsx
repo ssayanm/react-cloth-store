@@ -3,13 +3,13 @@ import React from "react";
 const CartItemComponent = ({ cartItem }) => {
   const { name, price, imageUrl, quantity } = cartItem;
   return (
-    <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">
-      <img className="h-72 w-64 object-cover" src={imageUrl} alt={name} />
-      <div className="py-1 flex px-4 justify-between text">
-        <div> {name}</div>
-        <div>
+    <div className="w-full flex mb-2 h-16 items-center justify-center">
+      <img className="w-10 h-10 object-cover" src={imageUrl} alt={name} />
+      <div className="w-2/3 flex flex-col justify-center items-start px-4 py-2">
+        <span className="text-xs"> {name}</span>
+        <span>
           {quantity} x ${price}
-        </div>
+        </span>
       </div>
     </div>
   );

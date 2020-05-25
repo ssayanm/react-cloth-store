@@ -11,7 +11,7 @@ const CartIconComponent = () => {
       onClick={toggleCartHidden}
     >
       <ShoppingIcon className="w-6" />
-      <span className="absolute py-2 text-xs font-bold">10</span>
+      <span className="absolute mt-8 pt-1 text-xs font-bold">10</span>
     </div>
   );
 };
