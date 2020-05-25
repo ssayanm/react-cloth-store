@@ -3,7 +3,7 @@ import { ReactComponent as ShoppingIcon } from "../assets/shopping-bag.svg";
 import { GlobalContext } from "../context/GlobalState";
 
 const CartIconComponent = () => {
-  const { hidden, toggleCartHidden } = useContext(GlobalContext);
+  const { toggleCartHidden } = useContext(GlobalContext);
 
   return (
     <div
