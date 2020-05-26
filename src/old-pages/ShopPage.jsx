@@ -1,16 +1,15 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-
-import CollectionPreview from "../components/CollectionPreview";
+import CategoryCardComponent from "../components/CategoryCardComponent";
 
 const ShopPage = () => {
-  const { collections, getCollections } = useContext(GlobalContext);
+  const { products, getProducts } = useContext(GlobalContext);
 
   return (
     <section className="container flex flex-wrap mb-4 w-full uppercase justify-center">
-      {collections.map((product) =>
+      {products.map((product) =>
         Object.values(product).map((item) => (
-          <CollectionPreview category={item} key={item.id} />
+          <CategoryCardComponent category={item} key={item.id} />
         ))
       )}
     </section>

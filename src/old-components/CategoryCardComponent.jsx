@@ -1,6 +1,6 @@
 import React from "react";
 import ProductCardComponent from "./ProductCardComponent";
-// import { GlobalContext } from "../context/GlobalState";
+//import { GlobalContext } from "../context/GlobalState";
 
 const CategoryCardComponent = ({ category }) => {
   // const { collections, getCollections } = useContext(GlobalContext);

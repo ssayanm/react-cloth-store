@@ -1,6 +1,6 @@
 import React from "react";
 
-const HomeCardComponent = ({ category, props }) => {
+const MenuItem = ({ category, props }) => {
   const { title, imageUrl, linkUrl } = category;
   const { history, match } = props;
   return (
@@ -23,4 +23,4 @@ const HomeCardComponent = ({ category, props }) => {
   );
 };
 
-export default HomeCardComponent;
+export default MenuItem;

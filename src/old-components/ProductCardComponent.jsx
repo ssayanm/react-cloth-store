@@ -5,7 +5,7 @@ import { GlobalContext } from "../context/GlobalState";
 const ProductCardComponent = ({ product, history }) => {
   const { addItem } = useContext(GlobalContext);
   // const [cartItem, setCartItem] = useState("");
-  const { name, price, imageUrl, linkUrl, match } = product;
+  const { name, price, imageUrl } = product;
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">
       <img
