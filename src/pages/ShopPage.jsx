@@ -1,20 +1,13 @@
-import React, { useContext } from "react";
-import { GlobalContext } from "../context/GlobalState";
+import React from "react";
+import { Route } from "react-router-dom";
+import CollectionsOverview from "../components/CollectionOverview";
+import CollectionPage from "./CollectionPage";
 
-import CollectionPreview from "../components/CollectionPreview";
-
-const ShopPage = () => {
-  const { collections, getCollections } = useContext(GlobalContext);
-
-  return (
-    <section className="container flex flex-wrap mb-4 w-full uppercase justify-center">
-      {collections.map((product) =>
-        Object.values(product).map((item) => (
-          <CollectionPreview category={item} key={item.id} />
-        ))
-      )}
-    </section>
-  );
-};
+const ShopPage = ({ match }) => (
+  <div className="shop-page">
+    <Route exact path={`${match.path}`} component={CollectionsOverview} />
+    <Route path={`${match.path}/:collectionId`} component={CollectionPage} />
+  </div>
+);
 
 export default ShopPage;

@@ -1,13 +1,14 @@
 import React from "react";
 import CollectionItem from "../components/CollectionItem";
 
-const CollectionPreview = ({ category }) => {
+const CollectionPreview = ({ item }) => {
+  const { title, items } = item;
   return (
     <section>
-      <h2 className="text-2xl m-3">{category.title}</h2>
+      <h2 className="text-2xl m-3">{title}</h2>
       <div className="flex flex-column">
         <div className="grid grid-cols-4">
-          {category.items
+          {items
             .filter((item, index) => index < 4)
             .map((item) => (
               <CollectionItem item={item} key={item.id} />
