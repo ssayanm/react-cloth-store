@@ -15,7 +15,12 @@ const CartDropDownComponent = () => {
           <span className="text-center mx-2 my-auto">Your cart is empty</span>
         )}
       </div>
-      <button className="mt-auto bg-black text-white p-2">
+      <button
+        className="mt-auto bg-black text-white p-2"
+        // onClick={() => {
+        //   props.history.push("/checkout");
+        // }}
+      >
         Go to Checkout
       </button>
     </div>

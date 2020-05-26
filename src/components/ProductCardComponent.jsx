@@ -1,10 +1,11 @@
 import React, { useContext } from "react";
+import { withRouter } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 
-const ProductCardComponent = ({ product }) => {
+const ProductCardComponent = ({ product, history }) => {
   const { addItem } = useContext(GlobalContext);
   // const [cartItem, setCartItem] = useState("");
-  const { name, price, imageUrl } = product;
+  const { name, price, imageUrl, linkUrl, match } = product;
   return (
     <div className="m-3 max-w-sm rounded shadow-lg text-center overflow-hidden">
       <img
@@ -26,4 +27,4 @@ const ProductCardComponent = ({ product }) => {
   );
 };
 
-export default ProductCardComponent;
+export default withRouter(ProductCardComponent);
