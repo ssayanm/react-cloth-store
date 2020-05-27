@@ -6,7 +6,7 @@ import CATEGORY_DATA from "./categoryData";
 
 //initial State
 const initialState = {
-  collections: [SHOP_DATA],
+  collections: SHOP_DATA,
   categories: [CATEGORY_DATA],
   cartItems: [],
   hidden: true,

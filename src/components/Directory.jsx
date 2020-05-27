@@ -4,7 +4,7 @@ import { withRouter } from "react-router-dom";
 import MenuItem from "./MenuItem";
 
 const Directory = (props) => {
-  const { categories, getCategories } = useContext(GlobalContext);
+  const { categories } = useContext(GlobalContext);
 
   return (
     <section className="container flex flex-wrap mb-4 w-full uppercase justify-center">
