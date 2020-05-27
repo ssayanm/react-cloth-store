@@ -2,12 +2,12 @@ import React, { useReducer, createContext } from "react";
 import AppReducer from "./AppReducer";
 // import axios from "axios";
 import SHOP_DATA from "./ShopData";
-import CATEGORY_DATA from "./categoryData";
+import DIRECTORY_DATA from "./DirectoryData";
 
 //initial State
 const initialState = {
   collections: SHOP_DATA,
-  categories: [CATEGORY_DATA],
+  directory: DIRECTORY_DATA,
   cartItems: [],
   hidden: true,
 };
@@ -114,7 +114,7 @@ export const GlobalProvider = ({ children }) => {
     <GlobalContext.Provider
       value={{
         collections: state.collections,
-        categories: state.categories,
+        directory: state.directory,
         cartItems: state.cartItems,
         hidden: state.hidden,
         addItem,
