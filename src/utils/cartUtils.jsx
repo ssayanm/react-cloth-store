@@ -28,14 +28,17 @@ export const removeItemFromCart = (cartItems, cartItemToRemove) => {
   );
 };
 
-export const selectCartItemsCount = (cartItems) => {
+export const filterItemFromCart = (cartItems, item) =>
+  cartItems.filter((cartItem) => cartItem.id !== item.id);
+
+export const getCartItemsCount = (cartItems) => {
   return cartItems.reduce(
     (accumalatedQuantity, cartItem) => accumalatedQuantity + cartItem.quantity,
     0
   );
 };
 
-export const selectCartTotal = (cartItems) => {
+export const getCartTotal = (cartItems) => {
   return (cartItems) =>
     cartItems.reduce(
       (accumalatedQuantity, cartItem) =>

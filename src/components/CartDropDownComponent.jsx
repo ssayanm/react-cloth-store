@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
+import { withRouter } from "react-router-dom";
 import { GlobalContext } from "../context/GlobalState";
 import CartItemComponent from "./CartItemComponent";
 
-const CartDropDownComponent = () => {
-  const { cartItems } = useContext(GlobalContext);
+const CartDropDownComponent = ({ history }) => {
+  const { cartItems, toggleCartHidden } = useContext(GlobalContext);
   return (
     <div className="w-48 h-72 flex flex-col p-5 absolute z-10 right-0 bg-white mx-16 border-2 mt-20">
       <div className="flex flex-col overflow-scroll h-48">
@@ -17,9 +18,10 @@ const CartDropDownComponent = () => {
       </div>
       <button
         className="mt-auto bg-black text-white p-2"
-        // onClick={() => {
-        //   props.history.push("/checkout");
-        // }}
+        onClick={() => {
+          history.push("/checkout");
+          toggleCartHidden();
+        }}
       >
         Go to Checkout
       </button>
@@ -27,4 +29,4 @@ const CartDropDownComponent = () => {
   );
 };
 
-export default CartDropDownComponent;
+export default withRouter(CartDropDownComponent);

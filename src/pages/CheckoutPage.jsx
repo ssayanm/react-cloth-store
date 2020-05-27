@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-import { selectCartTotal } from "../utils/cartUtils";
+import { getCartTotal } from "../utils/cartUtils";
 import CheckoutItemComponent from "../components/CheckoutItemComponent";
 
 const CheckoutPage = () => {
@@ -30,7 +30,7 @@ const CheckoutPage = () => {
         {cartItems.map((cartItem) => (
           <div>
             <CheckoutItemComponent key={cartItem.id} cartItem={cartItem} />
-            <div className="my-4 text">TOTAL: ${selectCartTotal(cartItem)}</div>
+            <div className="my-4 text">TOTAL: ${getCartTotal(cartItem)}</div>
           </div>
         ))}
       </div>
