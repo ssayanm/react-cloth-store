@@ -1,4 +1,8 @@
-import { addItemToCart, removeItemFromCart } from "../utils/cartUtils";
+import {
+  addItemToCart,
+  removeItemFromCart,
+  getCartTotal,
+} from "../utils/cartUtils";
 
 export default (state, action) => {
   switch (action.type) {
@@ -18,6 +22,12 @@ export default (state, action) => {
       return {
         ...state,
         cartItems: removeItemFromCart(state.cartItems, action.payload),
+      };
+
+    case "GET_CART_TOTAL":
+      return {
+        ...state,
+        cartItems: getCartTotal(state.cartItems, action.payload),
       };
 
     case "CLEAR_ITEM_FROM_CART":

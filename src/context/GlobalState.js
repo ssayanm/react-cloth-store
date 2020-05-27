@@ -37,6 +37,12 @@ export const GlobalProvider = ({ children }) => {
     payload: item,
   });
 
+  const getCartTotal = (item) =>
+    dispatch({
+      type: "GET_CART_TOTAL",
+      payload: item,
+    });
+
   // const clearItemFromCart = (item) => ({
   //   type: "CLEAR_ITEM_FROM_CART",
   //   payload: item,
@@ -120,6 +126,7 @@ export const GlobalProvider = ({ children }) => {
         addItem,
         removeItem,
         toggleCartHidden,
+        getCartTotal,
       }}
     >
       {children}
