@@ -11,19 +11,19 @@ const CheckoutPage = () => {
     <React.Fragment>
       <div className="container w-2/4 flex flex-col items-center">
         <div className="uppercase w-full flex justify-between border-b-2 border-color: #edf2f7;">
-          <div className="w-10">
+          <div className="">
             <span>Product</span>
           </div>
-          <div className="w-10">
+          <div className="">
             <span>Description</span>
           </div>
-          <div className="w-10">
+          <div className="">
             <span>Quantity</span>
           </div>
-          <div className="w-10">
+          <div className="">
             <span>Price</span>
           </div>
-          <div className="w-10">
+          <div className="">
             <span>Remove</span>
           </div>
         </div>
