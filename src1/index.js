@@ -1,14 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./assets/main.css";
+import { BrowserRouter } from "react-router-dom";
+import CartProvider from "./providers/cart/cart.provider.jsx";
+import { GlobalProvider } from "./providers/GlobalState";
+
+import "./index.css";
 import App from "./App";
-import { GlobalProvider } from "./context/GlobalState";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <GlobalProvider>
-      <App />
-    </GlobalProvider>
-  </React.StrictMode>,
+  <GlobalProvider>
+    <CartProvider>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </CartProvider>
+  </GlobalProvider>,
   document.getElementById("root")
 );

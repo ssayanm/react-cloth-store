@@ -2,6 +2,7 @@ import {
   addItemToCart,
   removeItemFromCart,
   getCartTotal,
+  filterItemFromCart,
 } from "../utils/cartUtils";
 
 export default (state, action) => {
@@ -33,9 +34,7 @@ export default (state, action) => {
     case "CLEAR_ITEM_FROM_CART":
       return {
         ...state,
-        cartItems: state.cartItems.filter(
-          (cartItem) => cartItem.id !== action.payload.id
-        ),
+        cartItems: filterItemFromCart(state.cartItems, action.payload),
       };
 
     default:
