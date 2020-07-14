@@ -4,32 +4,32 @@ import { GlobalContext } from "../context/GlobalState";
 import CheckoutItemComponent from "../components/CheckoutItemComponent";
 
 const CheckoutPage = () => {
-  const { cartItems, getCartTotal } = useContext(GlobalContext);
+  const { cartItems, cartTotal } = useContext(GlobalContext);
 
   return (
     <React.Fragment>
-      <div className="container w-2/4 flex flex-col items-center">
-        <div className="uppercase w-full flex justify-between border-b-2 border-color: #edf2f7;">
-          <div className="">
+      <div className="checkout-page">
+        <div className="checkout-header">
+          <div className="header-block">
             <span>Product</span>
           </div>
-          <div className="">
+          <div className="header-block">
             <span>Description</span>
           </div>
-          <div className="">
+          <div className="header-block">
             <span>Quantity</span>
           </div>
-          <div className="">
+          <div className="header-block">
             <span>Price</span>
           </div>
-          <div className="">
+          <div className="header-block">
             <span>Remove</span>
           </div>
         </div>
         {cartItems.map((cartItem) => (
           <CheckoutItemComponent key={cartItem.id} cartItem={cartItem} />
         ))}
-        <div className="mt-5 ml-8 text">TOTAL: {getCartTotal}</div>
+        <div className="total">TOTAL: ${cartTotal}</div>
       </div>
     </React.Fragment>
   );

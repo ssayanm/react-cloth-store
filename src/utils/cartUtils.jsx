@@ -41,5 +41,6 @@ export const getCartItemsCount = (cartItems) => {
 export const getCartTotal = (cartItems) =>
   cartItems.reduce(
     (accumalatedQuantity, cartItem) =>
-      accumalatedQuantity + cartItem.quantity * cartItem.price
+      accumalatedQuantity + cartItem.quantity * cartItem.price,
+    0
   );

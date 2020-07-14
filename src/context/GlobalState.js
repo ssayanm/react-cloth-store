@@ -8,6 +8,7 @@ const initialState = {
   collections: SHOP_DATA,
   directory: DIRECTORY_DATA,
   cartItems: [],
+  cartTotal: 0,
   hidden: true,
 };
 
@@ -37,15 +38,15 @@ export const GlobalProvider = ({ children }) => {
       payload: item,
     });
 
-  const getCartTotal = (item) =>
-    dispatch({
-      type: "GET_CART_TOTAL",
-      payload: item,
-    });
-
   const clearItemFromCart = (item) =>
     dispatch({
       type: "CLEAR_ITEM_FROM_CART",
+      payload: item,
+    });
+
+  const getCartTotal = (item) =>
+    dispatch({
+      type: "GET_CART_TOTAL",
       payload: item,
     });
 
@@ -56,6 +57,7 @@ export const GlobalProvider = ({ children }) => {
         directory: state.directory,
         cartItems: state.cartItems,
         hidden: state.hidden,
+        cartTotal: state.cartTotal,
         addItem,
         removeItem,
         toggleCartHidden,

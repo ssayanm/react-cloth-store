@@ -4,6 +4,7 @@ import {
   getCartTotal,
   filterItemFromCart,
 } from "../utils/cartUtils";
+import { stat } from "fs";
 
 export default (state, action) => {
   switch (action.type) {
@@ -27,8 +28,7 @@ export default (state, action) => {
 
     case "GET_CART_TOTAL":
       return {
-        ...state,
-        cartItems: getCartTotal(state.cartItems, action.payload),
+        cartTotal: state.cartTotal + 20,
       };
 
     case "CLEAR_ITEM_FROM_CART":
