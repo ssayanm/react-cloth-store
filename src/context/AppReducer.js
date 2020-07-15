@@ -1,7 +1,6 @@
 import {
   addItemToCart,
   removeItemFromCart,
-  getCartTotal,
   filterItemFromCart,
 } from "../utils/cartUtils";
 
