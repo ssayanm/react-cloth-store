@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
-// import { getCartTotal } from "../utils/cartUtils";
+import { getCartTotal } from "../utils/cartUtils";
 import CheckoutItemComponent from "../components/CheckoutItemComponent";
 
 const CheckoutPage = () => {
-  const { cartItems, cartTotal } = useContext(GlobalContext);
-
+  const { cartItems } = useContext(GlobalContext);
   return (
     <React.Fragment>
       <div className="checkout-page">
@@ -29,7 +28,7 @@ const CheckoutPage = () => {
         {cartItems.map((cartItem) => (
           <CheckoutItemComponent key={cartItem.id} cartItem={cartItem} />
         ))}
-        <div className="total">TOTAL: ${cartTotal}</div>
+        <div className="total">TOTAL: ${getCartTotal(cartItems)}</div>
       </div>
     </React.Fragment>
   );

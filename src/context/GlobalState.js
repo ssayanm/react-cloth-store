@@ -8,7 +8,6 @@ const initialState = {
   collections: SHOP_DATA,
   directory: DIRECTORY_DATA,
   cartItems: [],
-  cartTotal: 0,
   hidden: true,
 };
 
@@ -44,12 +43,6 @@ export const GlobalProvider = ({ children }) => {
       payload: item,
     });
 
-  const getCartTotal = (item) =>
-    dispatch({
-      type: "GET_CART_TOTAL",
-      payload: item,
-    });
-
   return (
     <GlobalContext.Provider
       value={{
@@ -57,11 +50,11 @@ export const GlobalProvider = ({ children }) => {
         directory: state.directory,
         cartItems: state.cartItems,
         hidden: state.hidden,
-        cartTotal: state.cartTotal,
+        // cartTotal: state.cartTotal,
         addItem,
         removeItem,
         toggleCartHidden,
-        getCartTotal,
+
         clearItemFromCart,
       }}
     >
